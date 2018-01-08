@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A41A3371FFF3E1F00724469 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A3361FFF3E1F00724469 /* AppDelegate.m */; };
+		0A41A33A1FFF3E1F00724469 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A3391FFF3E1F00724469 /* ViewController.m */; };
+		0A41A33D1FFF3E1F00724469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A41A33B1FFF3E1F00724469 /* Main.storyboard */; };
+		0A41A33F1FFF3E1F00724469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41A33E1FFF3E1F00724469 /* Assets.xcassets */; };
+		0A41A3421FFF3E1F00724469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A41A3401FFF3E1F00724469 /* LaunchScreen.storyboard */; };
+		0A41A3451FFF3E1F00724469 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A3441FFF3E1F00724469 /* main.m */; };
+		0A41A34F1FFF3E1F00724469 /* Seat_pickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A34E1FFF3E1F00724469 /* Seat_pickerTests.m */; };
+		0A41A35B1FFF40A900724469 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A35A1FFF40A900724469 /* Networking.m */; };
+		0A41A35E1FFF437300724469 /* SeatsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A35D1FFF437300724469 /* SeatsModel.m */; };
+		0A41A3641FFF48A500724469 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A41A3631FFF48A500724469 /* ViewModel.m */; };
+		0AA4040F200226AC00A5A278 /* Sector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4040E200226AC00A5A278 /* Sector.m */; };
+		0AA404122002277000A5A278 /* Legend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA404112002277000A5A278 /* Legend.m */; };
+		0AA404162002298E00A5A278 /* Seat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA404152002298E00A5A278 /* Seat.m */; };
+		339BC86532B2E9AD672431BE /* libPods-Seat picker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E99835E4A3C3C7E34E96E8 /* libPods-Seat picker.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A41A34B1FFF3E1F00724469 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A41A32A1FFF3E1F00724469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A41A3311FFF3E1F00724469;
+			remoteInfo = "Seat picker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A41A3321FFF3E1F00724469 /* Seat picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seat picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A41A3351FFF3E1F00724469 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A41A3361FFF3E1F00724469 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A41A3381FFF3E1F00724469 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0A41A3391FFF3E1F00724469 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A41A33C1FFF3E1F00724469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A41A33E1FFF3E1F00724469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A41A3411FFF3E1F00724469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A41A3431FFF3E1F00724469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A41A3441FFF3E1F00724469 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A41A34A1FFF3E1F00724469 /* Seat pickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Seat pickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A41A34E1FFF3E1F00724469 /* Seat_pickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seat_pickerTests.m; sourceTree = "<group>"; };
+		0A41A3501FFF3E1F00724469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A41A3591FFF40A900724469 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		0A41A35A1FFF40A900724469 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		0A41A35C1FFF437300724469 /* SeatsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeatsModel.h; sourceTree = "<group>"; };
+		0A41A35D1FFF437300724469 /* SeatsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatsModel.m; sourceTree = "<group>"; };
+		0A41A3621FFF48A500724469 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		0A41A3631FFF48A500724469 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		0AA4040D200226AC00A5A278 /* Sector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sector.h; sourceTree = "<group>"; };
+		0AA4040E200226AC00A5A278 /* Sector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sector.m; sourceTree = "<group>"; };
+		0AA404102002277000A5A278 /* Legend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Legend.h; sourceTree = "<group>"; };
+		0AA404112002277000A5A278 /* Legend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Legend.m; sourceTree = "<group>"; };
+		0AA404142002298E00A5A278 /* Seat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seat.h; sourceTree = "<group>"; };
+		0AA404152002298E00A5A278 /* Seat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seat.m; sourceTree = "<group>"; };
+		57B7405E09073F1118616CC7 /* Pods-Seat picker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seat picker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seat picker/Pods-Seat picker.debug.xcconfig"; sourceTree = "<group>"; };
+		66D1C30954606C4130042EB1 /* Pods-Seat picker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seat picker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seat picker/Pods-Seat picker.release.xcconfig"; sourceTree = "<group>"; };
+		75E99835E4A3C3C7E34E96E8 /* libPods-Seat picker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seat picker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A41A32F1FFF3E1F00724469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339BC86532B2E9AD672431BE /* libPods-Seat picker.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A41A3471FFF3E1F00724469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A3CC4972000EDDD00B9D6D6 /* Supporting classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A3591FFF40A900724469 /* Networking.h */,
+				0A41A35A1FFF40A900724469 /* Networking.m */,
+			);
+			path = "Supporting classes";
+			sourceTree = "<group>";
+		};
+		0A41A3291FFF3E1F00724469 = {
+			isa = PBXGroup;
+			children = (
+				0A41A3341FFF3E1F00724469 /* Seat picker */,
+				0A41A34D1FFF3E1F00724469 /* Seat pickerTests */,
+				0A41A3331FFF3E1F00724469 /* Products */,
+				9204850A136F157A7992DDB1 /* Pods */,
+				6BA044F3280CF27CCA8F3D16 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A41A3331FFF3E1F00724469 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A3321FFF3E1F00724469 /* Seat picker.app */,
+				0A41A34A1FFF3E1F00724469 /* Seat pickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A41A3341FFF3E1F00724469 /* Seat picker */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A33B1FFF3E1F00724469 /* Main.storyboard */,
+				0A41A3351FFF3E1F00724469 /* AppDelegate.h */,
+				0A41A3361FFF3E1F00724469 /* AppDelegate.m */,
+				0A41A3601FFF439900724469 /* Views */,
+				0A41A3611FFF489000724469 /* ViewModel */,
+				0A41A35F1FFF437D00724469 /* Model */,
+				0A3CC4972000EDDD00B9D6D6 /* Supporting classes */,
+				0A41A33E1FFF3E1F00724469 /* Assets.xcassets */,
+				0A41A3401FFF3E1F00724469 /* LaunchScreen.storyboard */,
+				0A41A3431FFF3E1F00724469 /* Info.plist */,
+				0A41A3441FFF3E1F00724469 /* main.m */,
+			);
+			path = "Seat picker";
+			sourceTree = "<group>";
+		};
+		0A41A34D1FFF3E1F00724469 /* Seat pickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A34E1FFF3E1F00724469 /* Seat_pickerTests.m */,
+				0A41A3501FFF3E1F00724469 /* Info.plist */,
+			);
+			path = "Seat pickerTests";
+			sourceTree = "<group>";
+		};
+		0A41A35F1FFF437D00724469 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A35C1FFF437300724469 /* SeatsModel.h */,
+				0A41A35D1FFF437300724469 /* SeatsModel.m */,
+				0AA4040C2002269800A5A278 /* Sector */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A41A3601FFF439900724469 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A3381FFF3E1F00724469 /* ViewController.h */,
+				0A41A3391FFF3E1F00724469 /* ViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A41A3611FFF489000724469 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A41A3621FFF48A500724469 /* ViewModel.h */,
+				0A41A3631FFF48A500724469 /* ViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0AA4040C2002269800A5A278 /* Sector */ = {
+			isa = PBXGroup;
+			children = (
+				0AA4040D200226AC00A5A278 /* Sector.h */,
+				0AA4040E200226AC00A5A278 /* Sector.m */,
+				0AA404132002277600A5A278 /* Legend */,
+				0AA404172002299800A5A278 /* Seat */,
+			);
+			path = Sector;
+			sourceTree = "<group>";
+		};
+		0AA404132002277600A5A278 /* Legend */ = {
+			isa = PBXGroup;
+			children = (
+				0AA404102002277000A5A278 /* Legend.h */,
+				0AA404112002277000A5A278 /* Legend.m */,
+			);
+			path = Legend;
+			sourceTree = "<group>";
+		};
+		0AA404172002299800A5A278 /* Seat */ = {
+			isa = PBXGroup;
+			children = (
+				0AA404142002298E00A5A278 /* Seat.h */,
+				0AA404152002298E00A5A278 /* Seat.m */,
+			);
+			path = Seat;
+			sourceTree = "<group>";
+		};
+		6BA044F3280CF27CCA8F3D16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75E99835E4A3C3C7E34E96E8 /* libPods-Seat picker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9204850A136F157A7992DDB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57B7405E09073F1118616CC7 /* Pods-Seat picker.debug.xcconfig */,
+				66D1C30954606C4130042EB1 /* Pods-Seat picker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A41A3311FFF3E1F00724469 /* Seat picker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A41A3531FFF3E1F00724469 /* Build configuration list for PBXNativeTarget "Seat picker" */;
+			buildPhases = (
+				12EF12A5E0B467373201D552 /* [CP] Check Pods Manifest.lock */,
+				0A41A32E1FFF3E1F00724469 /* Sources */,
+				0A41A32F1FFF3E1F00724469 /* Frameworks */,
+				0A41A3301FFF3E1F00724469 /* Resources */,
+				87090185BE4636B18CA0DA5C /* [CP] Embed Pods Frameworks */,
+				3E471F98BFF2B0A46F4A4437 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Seat picker";
+			productName = "Seat picker";
+			productReference = 0A41A3321FFF3E1F00724469 /* Seat picker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A41A3491FFF3E1F00724469 /* Seat pickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A41A3561FFF3E1F00724469 /* Build configuration list for PBXNativeTarget "Seat pickerTests" */;
+			buildPhases = (
+				0A41A3461FFF3E1F00724469 /* Sources */,
+				0A41A3471FFF3E1F00724469 /* Frameworks */,
+				0A41A3481FFF3E1F00724469 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A41A34C1FFF3E1F00724469 /* PBXTargetDependency */,
+			);
+			name = "Seat pickerTests";
+			productName = "Seat pickerTests";
+			productReference = 0A41A34A1FFF3E1F00724469 /* Seat pickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A41A32A1FFF3E1F00724469 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Дмитрий Вашлаев";
+				TargetAttributes = {
+					0A41A3311FFF3E1F00724469 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					0A41A3491FFF3E1F00724469 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0A41A3311FFF3E1F00724469;
+					};
+				};
+			};
+			buildConfigurationList = 0A41A32D1FFF3E1F00724469 /* Build configuration list for PBXProject "Seat picker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A41A3291FFF3E1F00724469;
+			productRefGroup = 0A41A3331FFF3E1F00724469 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A41A3311FFF3E1F00724469 /* Seat picker */,
+				0A41A3491FFF3E1F00724469 /* Seat pickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A41A3301FFF3E1F00724469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A41A3421FFF3E1F00724469 /* LaunchScreen.storyboard in Resources */,
+				0A41A33F1FFF3E1F00724469 /* Assets.xcassets in Resources */,
+				0A41A33D1FFF3E1F00724469 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A41A3481FFF3E1F00724469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12EF12A5E0B467373201D552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E471F98BFF2B0A46F4A4437 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seat picker/Pods-Seat picker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87090185BE4636B18CA0DA5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seat picker/Pods-Seat picker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A41A32E1FFF3E1F00724469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A41A3641FFF48A500724469 /* ViewModel.m in Sources */,
+				0A41A33A1FFF3E1F00724469 /* ViewController.m in Sources */,
+				0AA404122002277000A5A278 /* Legend.m in Sources */,
+				0A41A3451FFF3E1F00724469 /* main.m in Sources */,
+				0A41A3371FFF3E1F00724469 /* AppDelegate.m in Sources */,
+				0A41A35E1FFF437300724469 /* SeatsModel.m in Sources */,
+				0AA4040F200226AC00A5A278 /* Sector.m in Sources */,
+				0A41A35B1FFF40A900724469 /* Networking.m in Sources */,
+				0AA404162002298E00A5A278 /* Seat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A41A3461FFF3E1F00724469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A41A34F1FFF3E1F00724469 /* Seat_pickerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A41A34C1FFF3E1F00724469 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A41A3311FFF3E1F00724469 /* Seat picker */;
+			targetProxy = 0A41A34B1FFF3E1F00724469 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A41A33B1FFF3E1F00724469 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A41A33C1FFF3E1F00724469 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A41A3401FFF3E1F00724469 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A41A3411FFF3E1F00724469 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A41A3511FFF3E1F00724469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A41A3521FFF3E1F00724469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A41A3541FFF3E1F00724469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B7405E09073F1118616CC7 /* Pods-Seat picker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJD957SY8C;
+				INFOPLIST_FILE = "Seat picker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DVDevelopment.Seat-picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A41A3551FFF3E1F00724469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D1C30954606C4130042EB1 /* Pods-Seat picker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJD957SY8C;
+				INFOPLIST_FILE = "Seat picker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DVDevelopment.Seat-picker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A41A3571FFF3E1F00724469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJD957SY8C;
+				INFOPLIST_FILE = "Seat pickerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DVDevelopment.Seat-pickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seat picker.app/Seat picker";
+			};
+			name = Debug;
+		};
+		0A41A3581FFF3E1F00724469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJD957SY8C;
+				INFOPLIST_FILE = "Seat pickerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DVDevelopment.Seat-pickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seat picker.app/Seat picker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A41A32D1FFF3E1F00724469 /* Build configuration list for PBXProject "Seat picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A41A3511FFF3E1F00724469 /* Debug */,
+				0A41A3521FFF3E1F00724469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A41A3531FFF3E1F00724469 /* Build configuration list for PBXNativeTarget "Seat picker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A41A3541FFF3E1F00724469 /* Debug */,
+				0A41A3551FFF3E1F00724469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A41A3561FFF3E1F00724469 /* Build configuration list for PBXNativeTarget "Seat pickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A41A3571FFF3E1F00724469 /* Debug */,
+				0A41A3581FFF3E1F00724469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A41A32A1FFF3E1F00724469 /* Project object */;
+}
