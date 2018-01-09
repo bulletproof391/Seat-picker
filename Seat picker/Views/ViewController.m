@@ -37,6 +37,13 @@
 }
 
 
+#pragma mark - UIScrollView delegate
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.contentView;
+}
+
+
 #pragma mark - Scaling
 - (void)scrollViewInitalSetup {
     self.scrollView.minimumZoomScale = 1.0;
@@ -57,12 +64,6 @@
     [self.contentView setFrame:newFrame];
 }
 
-// UIScrollView delegate implementation
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return self.contentView;
-}
-
 
 #pragma mark - Buttons
 - (void)addButtonsToContentView {
@@ -72,8 +73,8 @@
     if (rowsCount == 0 || columnsCount == 0)
         return;
     
-    NSInteger width = columnsCount * buttonAspectSize + columnsCount * (buttonDelimiter + 1);
-    NSInteger height = rowsCount * buttonAspectSize + rowsCount * (buttonDelimiter + 1);
+    NSInteger width = columnsCount * buttonAspectSize + columnsCount * buttonDelimiter + buttonDelimiter;
+    NSInteger height = rowsCount * buttonAspectSize + rowsCount * buttonDelimiter + buttonDelimiter;
     [self setViewsWidth:width height:height];
     
     
@@ -81,10 +82,11 @@
         for (int j = 0; j < columnsCount; j++) {
             UIButton *newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             newButton.bounds = CGRectMake(0, 0, buttonAspectSize, buttonAspectSize);
-            newButton.center = CGPointMake((j + 3) * buttonDelimiter + j * buttonAspectSize, (i + 3) * buttonDelimiter + i * buttonAspectSize);
-            
+            newButton.center = CGPointMake(buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * j,
+                                           buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * i);
+
             [newButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.7 blue:0.1 alpha:1]];
-            
+
             [newButton setTag:i + j];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapGestureHandler:)];
             [newButton addGestureRecognizer:tapGesture];
@@ -95,8 +97,8 @@
     
     
 //    UIButton *newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    newButton.bounds = CGRectMake(0, 0, 40, 40);
-//    newButton.center = CGPointMake(120.0, 70.0);
+//    newButton.bounds = CGRectMake(0, 0, buttonAspectSize, buttonAspectSize);
+//    newButton.center = CGPointMake(buttonAspectSize, buttonAspectSize);
 //    [newButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.7 blue:0.1 alpha:1]];
 //    [newButton setTag:2];
 //
