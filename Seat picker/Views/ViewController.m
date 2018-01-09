@@ -10,7 +10,7 @@
 #import <libextobjc/EXTScope.h>
 
 @interface ViewController ()
-
+@property (strong, nonatomic) UIColor *selectedSeatColor;
 @end
 
 @implementation ViewController
@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.totalAmount.text = @"";
+    self.selectedSeatColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
+    
     [self scrollViewInitalSetup];
     [self bindViewModel];
 }
@@ -52,15 +55,13 @@
 }
 
 - (void)setViewsWidth:(NSInteger)width height:(NSInteger)height {
-//    NSLog(@"%f  %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
-//    NSLog(@"%f  %f", self.contentView.frame.origin.x, self.contentView.frame.origin.y);
-    
     CGRect newFrame = self.contentView.frame;
     
     newFrame.size.width = width;
     newFrame.size.height = height;
     
     self.scrollView.contentSize = CGSizeMake(width, height);
+//    [self.scrollView setFrame:newFrame];
     [self.contentView setFrame:newFrame];
 }
 
@@ -69,6 +70,7 @@
 - (void)addButtonsToContentView {
     NSInteger rowsCount = [self.viewModel rowsCount];
     NSInteger columnsCount = [self.viewModel columnsCount];
+    NSInteger currentCellIndex = 0;
     
     if (rowsCount == 0 || columnsCount == 0)
         return;
@@ -79,48 +81,42 @@
     
     
     for (int i = 0; i < rowsCount; i++) {
-        for (int j = 0; j < columnsCount; j++) {
+        for (int j = 0; j < columnsCount; j++, currentCellIndex++) {
             UIButton *newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             newButton.bounds = CGRectMake(0, 0, buttonAspectSize, buttonAspectSize);
             newButton.center = CGPointMake(buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * j,
                                            buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * i);
 
-            [newButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.7 blue:0.1 alpha:1]];
-
-            [newButton setTag:i + j];
+            [newButton setTag:currentCellIndex];
+            
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapGestureHandler:)];
-            [newButton addGestureRecognizer:tapGesture];
+            
+            if ([self.viewModel isEnabled:currentCellIndex]) {
+                [newButton setEnabled:YES];
+                [newButton setBackgroundColor:[self.viewModel getBackgroundColor:currentCellIndex]];
+                [newButton addGestureRecognizer:tapGesture];
+            } else {
+                [newButton setEnabled:NO];
+            }
+            
             [self.contentView addSubview:newButton];
         }
     }
-    
-    
-    
-//    UIButton *newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    newButton.bounds = CGRectMake(0, 0, buttonAspectSize, buttonAspectSize);
-//    newButton.center = CGPointMake(buttonAspectSize, buttonAspectSize);
-//    [newButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.7 blue:0.1 alpha:1]];
-//    [newButton setTag:2];
-//
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapGestureHandler:)];
-//    [newButton addGestureRecognizer:tapGesture];
-//
-//    [self.contentView addSubview:newButton];
 }
 
 - (void)buttonTapGestureHandler:(UIGestureRecognizer *)gestureRecognizer {
-    UIColor *freeSeatColor = [UIColor colorWithRed:0.4 green:0.7 blue:0.1 alpha:1];
-    UIColor *chosenSeatColor = [UIColor colorWithRed:0.8 green:0.2 blue:0.7 alpha:1];
-    
-    
     UIButton *tappedButton = (UIButton *)gestureRecognizer.view;
-    if ([tappedButton.backgroundColor isEqual:freeSeatColor]) {
-        tappedButton.backgroundColor = chosenSeatColor;
-    } else {
-        tappedButton.backgroundColor = freeSeatColor;
+    NSInteger buttonTag = tappedButton.tag;
+    UIColor *seatColor = [self.viewModel getBackgroundColor:buttonTag];
+    
+    if ([self.viewModel availableSeat:buttonTag]) {
+        if ([tappedButton.backgroundColor isEqual:self.selectedSeatColor]) {
+            [tappedButton setBackgroundColor:seatColor];
+        } else {
+            [tappedButton setBackgroundColor:self.selectedSeatColor];
+        }
     }
     
-//    NSInteger tag = tappedButton.tag;
-//    NSLog(@"%i", tag);
+    NSLog(@"%li", tappedButton.tag);
 }
 @end

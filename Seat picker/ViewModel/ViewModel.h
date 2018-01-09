@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SeatsModel.h"
-#import "Sector.h"
 
 @interface ViewModel : NSObject
 
@@ -19,5 +18,8 @@
 - (instancetype)initWithModel:(SeatsModel *)model;
 - (NSInteger)rowsCount;
 - (NSInteger)columnsCount;
+- (BOOL)isEnabled:(NSInteger)buttonTag;
+- (BOOL)availableSeat:(NSInteger)buttonTag;
+- (UIColor *)getBackgroundColor:(NSInteger)buttonTag;
 
 @end

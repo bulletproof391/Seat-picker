@@ -7,6 +7,7 @@
 //
 
 #import "ViewModel.h"
+#import "Sector.h"
 
 @interface ViewModel ()
 
@@ -34,12 +35,22 @@
 }
 
 - (NSInteger)rowsCount {
-//    return (self.model) ? self.model.sector.rowsCount : 0;
     return (self.sector) ? self.sector.rowsCount : 0;
 }
 
 - (NSInteger)columnsCount {
-//    return (self.model) ? self.model.sector.columnsCount : 0;
     return (self.sector) ? self.sector.columnsCount : 0;
+}
+
+- (BOOL)isEnabled:(NSInteger)buttonTag {
+    return self.sector.seats[buttonTag].enabled;
+}
+
+- (UIColor *)getBackgroundColor:(NSInteger)buttonTag {
+    return self.sector.seats[buttonTag].color;
+}
+
+- (BOOL)availableSeat:(NSInteger)buttonTag {
+    return self.sector.seats[buttonTag].isAvailable;
 }
 @end
