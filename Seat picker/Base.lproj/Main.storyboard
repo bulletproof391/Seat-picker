@@ -19,26 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-DW-SDE">
-                                <rect key="frame" x="16" y="185" width="343" height="241"/>
+                                <rect key="frame" x="16" y="213" width="343" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xf-d9-3Db">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="241"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.97366823189999996" green="0.69164869822428432" blue="0.67465162943767754" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.5191021093" green="0.77726467610000005" blue="0.97366823189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.79819417689363759" green="0.90596732668286595" blue="0.97366823189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LLl-99-afC" userLabel="Legend View">
+                                <rect key="frame" x="16" y="165" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Totals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lR-bp-DIF">
-                                <rect key="frame" x="16" y="460" width="46" height="21"/>
+                                <rect key="frame" x="16" y="462" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWe-Zo-G7y">
-                                <rect key="frame" x="70" y="460" width="289" height="21"/>
+                                <rect key="frame" x="70" y="462" width="289" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -50,6 +53,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="0xf-d9-3Db" id="7lf-Q6-jB2"/>
+                        <outlet property="legendView" destination="LLl-99-afC" id="aEs-A9-WhY"/>
                         <outlet property="scrollView" destination="T1h-DW-SDE" id="6jN-Hu-14S"/>
                         <outlet property="totalAmount" destination="QWe-Zo-G7y" id="yto-Wk-X2D"/>
                     </connections>

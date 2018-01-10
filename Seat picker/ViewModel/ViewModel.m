@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) SeatsModel *model;
 @property (nonatomic, strong) Sector *sector;
+@property NSInteger totalAmount;
 
 @end
 
@@ -34,6 +35,7 @@
     return self;
 }
 
+# pragma mark - Seats
 - (NSInteger)rowsCount {
     return (self.sector) ? self.sector.rowsCount : 0;
 }
@@ -52,5 +54,33 @@
 
 - (BOOL)availableSeat:(NSInteger)buttonTag {
     return self.sector.seats[buttonTag].isAvailable;
+}
+
+- (NSString *)recountTotals:(NSInteger)buttonTag withOperation:(NumericOperation)operation{
+    switch (operation) {
+        case NumericOperationAdd:
+            self.totalAmount += self.sector.seats[buttonTag].price;
+            break;
+            
+        case NumericOperationSubtract:
+            self.totalAmount -= self.sector.seats[buttonTag].price;
+            break;
+    }
+    
+    return [NSString stringWithFormat:@"%li", self.totalAmount];
+}
+
+
+# pragma mark - Legend
+- (NSInteger)getLegendLabelsCount {
+    return self.sector.legend.count;
+}
+
+- (UIColor *)getLegendLabelColorWithIndex:(NSInteger)index {
+    return self.sector.legend[index].color;
+}
+
+- (NSString *)getLegendLabelTextWithIndex:(NSInteger)index {
+    return self.sector.legend[index].caption;
 }
 @end
