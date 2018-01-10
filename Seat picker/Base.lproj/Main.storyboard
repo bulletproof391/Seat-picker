@@ -27,7 +27,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.79819417689363759" green="0.90596732668286595" blue="0.97366823189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.91421095762155991" green="0.91421095762155991" blue="0.91421095762155991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LLl-99-afC" userLabel="Legend View">
                                 <rect key="frame" x="16" y="165" width="343" height="40"/>

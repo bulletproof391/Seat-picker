@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.totalAmount.text = @"";
-    self.selectedSeatColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
+    self.selectedSeatColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.05 alpha:1.0];
     
     [self scrollViewInitalSetup];
     [self bindViewModel];
