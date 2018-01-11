@@ -12,8 +12,9 @@
 static const double legendLabelColorAspectSize = 30.0;
 static const double legendTextLabelWidth = 70.0;
 static const double legendTextLabelHeight = 21.0;
-static const double buttonAspectSize = 15.0;
-static const double buttonDelimiter = 5.0;
+//static const double buttonAspectSize = 15.0;
+static const double buttonDelimiter = 2.0;
+//static const double spaceToMargin = 16.0;
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>
 

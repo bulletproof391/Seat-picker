@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) UIColor *selectedSeatColor;
+@property double buttonAspectSize;
 @end
 
 @implementation ViewController
@@ -35,6 +36,7 @@
     @weakify(self);
     [[RACObserve(self.viewModel, hasUpdatedContent) deliverOnMainThread] subscribeNext:^(id x) {
         @strongify(self);
+        [self calculateButtonSize];
         [self addButtonsToContentView];
         [self addLegend];
     }];
@@ -61,13 +63,25 @@
     newFrame.size.width = width;
     newFrame.size.height = height;
     
-    self.scrollView.contentSize = CGSizeMake(width, height);
-//    [self.scrollView setFrame:newFrame];
     [self.contentView setFrame:newFrame];
+    
+    self.scrollView.contentSize = CGSizeMake(width, height);
+    newFrame.origin = self.scrollView.frame.origin;
+    [self.scrollView setFrame:newFrame];
 }
 
 
 #pragma mark - Buttons
+- (void)calculateButtonSize {
+    NSInteger columnsCount = [self.viewModel columnsCount];
+    
+    if (columnsCount == 0) {
+        return;
+    }
+    
+    self.buttonAspectSize = (self.scrollView.frame.size.width - (columnsCount + 1) * buttonDelimiter) / columnsCount;
+}
+
 - (void)addButtonsToContentView {
     NSInteger rowsCount = [self.viewModel rowsCount];
     NSInteger columnsCount = [self.viewModel columnsCount];
@@ -76,17 +90,17 @@
     if (rowsCount == 0 || columnsCount == 0)
         return;
     
-    NSInteger width = columnsCount * buttonAspectSize + columnsCount * buttonDelimiter + buttonDelimiter;
-    NSInteger height = rowsCount * buttonAspectSize + rowsCount * buttonDelimiter + buttonDelimiter;
+    NSInteger width = columnsCount * self.buttonAspectSize + columnsCount * buttonDelimiter + buttonDelimiter;
+    NSInteger height = rowsCount * self.buttonAspectSize + rowsCount * buttonDelimiter + buttonDelimiter;
     [self setViewsWidth:width height:height];
     
     
     for (int i = 0; i < rowsCount; i++) {
         for (int j = 0; j < columnsCount; j++, currentCellIndex++) {
             UIButton *newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            newButton.bounds = CGRectMake(0, 0, buttonAspectSize, buttonAspectSize);
-            newButton.center = CGPointMake(buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * j,
-                                           buttonAspectSize / 2 + buttonDelimiter + (buttonAspectSize + buttonDelimiter) * i);
+            newButton.bounds = CGRectMake(0, 0, self.buttonAspectSize, self.buttonAspectSize);
+            newButton.center = CGPointMake(self.buttonAspectSize / 2 + buttonDelimiter + (self.buttonAspectSize + buttonDelimiter) * j,
+                                           self.buttonAspectSize / 2 + buttonDelimiter + (self.buttonAspectSize + buttonDelimiter) * i);
 
             [newButton setTag:currentCellIndex];
             
