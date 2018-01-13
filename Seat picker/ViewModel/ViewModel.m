@@ -7,7 +7,6 @@
 //
 
 #import "ViewModel.h"
-#import "Sector.h"
 
 @interface ViewModel ()
 

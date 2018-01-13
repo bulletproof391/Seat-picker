@@ -39,7 +39,7 @@
     
     if (error) {
         NSLog(@"%@", [error description]);
-        [RACSignal return:nil];
+        return nil;
     }
     
     sector.identifier = [sectorDictionary objectForKey:@"id"];

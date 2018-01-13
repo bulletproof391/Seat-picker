@@ -14,7 +14,6 @@
 
 @interface SeatsModel : NSObject
 
-//@property (nonatomic, strong) Sector *sector;
 @property (nonatomic, strong) RACSignal *sectorSignal;
 - (instancetype)initWithURL:(NSURL *)url;
 
